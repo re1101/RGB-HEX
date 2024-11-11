@@ -1,0 +1,51 @@
+fn main(){
+
+    let mut input = String::new();
+    let gotR: bool = false;
+    let gotG: bool = false;
+    let gotB: bool = false;
+    let r: i32 = 0;
+    let g: i32 = 0;
+    let b: i32 = 0;
+
+    println!("Ingrese los valores RGB");
+    while !gotR {
+        println!("R:");
+
+        io::stdin().read_line(&mut input)
+            .expect("Failed to read line");
+
+        let aux = input_text.trim();
+        match aux.parse::<i32>() {
+            Ok(i) => if let PAT = (i <= 255 && i >= 0) {r = i; gotR = true;} else {println!("input is not within range: {}", i);},
+            Err(..) => println!("input is not an integer: {}", trimmed),
+        };
+    }
+
+    while !gotG {
+        println!("G:");
+
+        io::stdin().read_line(&mut input)
+            .expect("Failed to read line");
+
+        let aux = input_text.trim();
+        match aux.parse::<i32>() {
+            Ok(i) => if let PAT = (i <= 255 && i >= 0) {g = i; gotG = true;} else {println!("input is not within range: {}", i);},
+            Err(..) => println!("input is not an integer: {}", trimmed),
+        };
+    }
+
+    while !gotB {
+        println!("B:");
+
+        io::stdin().read_line(&mut input)
+            .expect("Failed to read line");
+
+            let aux = input_text.trim();
+            match aux.parse::<i32>() {
+                Ok(i) => if let PAT = (i <= 255 && i >= 0) {b = i; gotB = true;} else {println!("input is not within range: {}", i);},
+                Err(..) => println!("input is not an integer: {}", trimmed),
+            };
+    }
+
+}
