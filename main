@@ -4,52 +4,132 @@ fn main(){
     let gotR: bool = false;
     let gotG: bool = false;
     let gotB: bool = false;
-    let r: i8 = 0;
-    let g: i8 = 0;
-    let b: i8 = 0;
-
-    println!("Ingrese los valores RGB");
-    while !gotR {
-        println!("R:");
-
-        io::stdin().read_line(&mut input)
-            .expect("Failed to read line");
-
-        let aux = input_text.trim();
-        match aux.parse::<i32>() {
-            Ok(i) => if let PAT = (i <= 255 && i >= 0) {r = i; gotR = true;} else {println!("input is not within range: {}", i);},
-            Err(..) => println!("input is not an integer: {}", trimmed),
-        };
-    }
-
-    while !gotG {
-        println!("G:");
+    let go: bool = true;
+    let r: u8 = 0;
+    let g: u8 = 0;
+    let b: u8 = 0;
+    while go {
+        println!("RBG 2 HEX: R");
+        println!("HEX 2 RGB: H");
+        println!("EXIT: X");
 
         io::stdin().read_line(&mut input)
-            .expect("Failed to read line");
+                .expect("Failed to read line");
 
-        let aux = input_text.trim();
-        match aux.parse::<i32>() {
-            Ok(i) => if let PAT = (i <= 255 && i >= 0) {g = i; gotG = true;} else {println!("input is not within range: {}", i);},
-            Err(..) => println!("input is not an integer: {}", trimmed),
-        };
-    }
+        let opc = input_text.trim();
 
-    while !gotB {
-        println!("B:");
+        if opc == "R"{
+            println!("Ingrese los valores RGB");
+            while !gotR {
+                println!("R:");
 
-        io::stdin().read_line(&mut input)
-            .expect("Failed to read line");
+                io::stdin().read_line(&mut input)
+                    .expect("Failed to read line");
+
+                let aux = input_text.trim();
+                match aux.parse::<i32>() {
+                    Ok(i) => if let PAT = (i <= 255 && i >= 0) {r = i; gotR = true;} else {println!("input is not within range: {}", i);},
+                    Err(..) => println!("input is not an integer: {}", trimmed),
+                };
+            }
+
+            while !gotG {
+                println!("G:");
+
+                io::stdin().read_line(&mut input)
+                    .expect("Failed to read line");
+
+                let aux = input_text.trim();
+                match aux.parse::<i32>() {
+                    Ok(i) => if let PAT = (i <= 255 && i >= 0) {g = i; gotG = true;} else {println!("input is not within range: {}", i);},
+                    Err(..) => println!("input is not an integer: {}", trimmed),
+                };
+            }
+
+            while !gotB {
+                println!("B:");
+
+                io::stdin().read_line(&mut input)
+                    .expect("Failed to read line");
+
+                let aux = input_text.trim();
+                match aux.parse::<i32>() {
+                    Ok(i) => if let PAT = (i <= 255 && i >= 0) {b = i; gotB = true;} else {println!("input is not within range: {}", i);},
+                    Err(..) => println!("input is not an integer: {}", trimmed),
+                };
+            }
+
+            let resHex = RGBtoHEX(r, g, b);
+
+            println!();
+
+        } else if opc == "H"{
+            println!("Ingrese el valor Hexadecimal");
+            io::stdin().read_line(&mut input)
+                    .expect("Failed to read line");
 
             let aux = input_text.trim();
-            match aux.parse::<i32>() {
-                Ok(i) => if let PAT = (i <= 255 && i >= 0) {b = i; gotB = true;} else {println!("input is not within range: {}", i);},
-                Err(..) => println!("input is not an integer: {}", trimmed),
-            };
-    }
+            let (resR, resG, resB) = HEXtoRGB(aux);
 
+            println!("(R:{}, G:{}, B:{})", resR, resG, resB);
+
+        } else if opc == "X"{
+            println("Hasta Pronto");
+            go = false;
+        } else {
+            println!("Opcion Invalida, Ingrese una Opcion Valida");
+        }
+    }
 }
 
-fn RGBtoHEX(r: i8, g: i8, b: i8){
+fn RGBtoHEX(r: u8, g: u8, b: u8) -> String{
+    let mut hex = String::from("#")
+    hex.push_str(format!("{:x}", r)); 
+    hex.push_str(format!("{:x}", g));
+    hex.push_str(format!("{:x}", b));
+    (hex)
+}
 
+fn HEXtoRGB(hex: String) -> (u8, u8, u8){
+    let j: u8 = 0;
+    let mut rHex= String::from("");
+    let mut gHex= String::from("");
+    let mut bHex= String::from("");
+
+    if hex.chars().count() == 7 {
+        if hex.starts_with('#') {
+            for i in 1..hex.chars().count() {
+                if j<2{
+                    rHex.push(hex.nth(i));
+                } else if j<4 {
+                    gHex.push(hex.nth(i));
+                } else if j<4 {
+                    bHex.push(hex.nth(i));
+                }
+                j++;
+            }
+        } else {
+            return (0,0,0);
+        }
+    }
+    else if hex.chars().count = 6{
+        for i in 0..hex.chars().count() {
+            if j<2{
+                rHex.push(hex.nth(i));
+            } else if j<4 {
+                gHex.push(hex.nth(i));
+            } else if j<4 {
+                bHex.push(hex.nth(i));
+            }
+            j++;
+        }
+    } else {
+        return (0,0,0);
+    }
+
+    let r = u8::from_str_radix(rHex, 16)?;
+    let g = u8::from_str_radix(gHex, 16)?;
+    let b = u8::from_str_radix(bHex, 16)?;
+
+    (r, g, b)
 }
