@@ -4,9 +4,9 @@ fn main(){
     let gotR: bool = false;
     let gotG: bool = false;
     let gotB: bool = false;
-    let r: i32 = 0;
-    let g: i32 = 0;
-    let b: i32 = 0;
+    let r: i8 = 0;
+    let g: i8 = 0;
+    let b: i8 = 0;
 
     println!("Ingrese los valores RGB");
     while !gotR {
@@ -47,5 +47,9 @@ fn main(){
                 Err(..) => println!("input is not an integer: {}", trimmed),
             };
     }
+
+}
+
+fn RGBtoHEX(r: i8, g: i8, b: i8){
 
 }
