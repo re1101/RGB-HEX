@@ -76,7 +76,7 @@ fn main(){
 
             let resHex = RGBtoHEX(r, g, b);
 
-            println!("RGB:({},{},{}) -> HEX:#{}", r, g, b, resHex);
+            println!("RGB:({},{},{}) -> HEX:{}", r, g, b, resHex);
 
         } else if opc == "H"{
 
@@ -106,9 +106,24 @@ fn main(){
 
 fn RGBtoHEX(r: u8, g: u8, b: u8) -> String{
     let mut hex = String::from("#");
-    hex.push_str(&format!("{:X}", r) as &str); 
-    hex.push_str(&format!("{:X}", g) as &str);
-    hex.push_str(&format!("{:X}", b) as &str);
+    if r < 16{
+        hex.push_str(&format!("{:X}", 0) as &str); 
+        hex.push_str(&format!("{:X}", r) as &str); 
+    } else {
+        hex.push_str(&format!("{:X}", r) as &str);
+    } 
+    if g < 16{
+        hex.push_str(&format!("{:X}", 0) as &str); 
+        hex.push_str(&format!("{:X}", g) as &str); 
+    } else {
+        hex.push_str(&format!("{:X}", g) as &str);
+    } 
+    if b < 16{
+        hex.push_str(&format!("{:X}", 0) as &str); 
+        hex.push_str(&format!("{:X}", b) as &str); 
+    } else {
+        hex.push_str(&format!("{:X}", b) as &str);
+    } 
     return hex;
 }
 
