@@ -1,4 +1,9 @@
 use std::io;
+use ferris_says::say;
+
+#[macro_use]
+extern crate ferris_print;
+extern crate ferris_says;
 
 fn main(){
 
@@ -9,6 +14,7 @@ fn main(){
     let mut go: bool = true;
 
     while go {
+        print!("{}[2J", 27 as char);
         println!("RBG 2 HEX: R");
         println!("HEX 2 RGB: H");
         println!("EXIT: X");
@@ -76,7 +82,12 @@ fn main(){
 
             let resHex = RGBtoHEX(r, g, b);
 
-            println!("RGB:({},{},{}) -> HEX:{}", r, g, b, resHex);
+            ferrisprint!("RGB:({},{},{}) -> HEX:{}", r, g, b, resHex);
+
+            io::stdin().read_line(&mut input);
+                    //.expect("Failed to read line");
+
+            input.clear();
 
         } else if opc == "H"{
 
@@ -90,12 +101,16 @@ fn main(){
 
             let (resR, resG, resB) = HEXtoRGB(aux.to_string());
 
-            println!("HEX:#{} -> RGB:({},{},{})", aux.to_string(), resR, resG, resB);
+            ferrisprint!("HEX:#{} -> RGB:({},{},{})", aux.to_string(), resR, resG, resB);
+
+            io::stdin().read_line(&mut input);
+                    //.expect("Failed to read line");
 
             input.clear();
 
         } else if opc == "X"{
-            println!("Hasta Pronto");
+            ferrisprint!("¡Hasta Pronto!");
+    
             go = false;
         } else {
             println!("Opcion Invalida, Ingrese una Opcion Valida");
