@@ -1,1 +1,1 @@
-C:\Users\GPOSMPC19\OneDrive\ -\ Resistencias\ San\ Marino,\ S.A.\ de\ C.V\Documentos\Varios\RGB-HEX\target\debug\main.exe: C:\Users\GPOSMPC19\OneDrive\ -\ Resistencias\ San\ Marino,\ S.A.\ de\ C.V\Documentos\Varios\RGB-HEX\src\main
+D:\Documents\GIT\ REPOS\RGB-HEX\target\debug\main.exe: D:\Documents\GIT\ REPOS\RGB-HEX\src\main.rs

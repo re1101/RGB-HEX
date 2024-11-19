@@ -8,9 +8,11 @@ description = "Small RUST app to convert from RGB to HEX and backwards"
 readme = "README.md"
 repository = "https://github.com/re1101/RGB-HEX"
 publish = false
+
 [dependencies]
 ferris-says = "0.3.1"
 ferris_print = "0.1.0"
+
 [[bin]]
 name = "main"
-path = "src/main"
+path = "src/main.rs"
