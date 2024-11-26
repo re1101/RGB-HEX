@@ -43,8 +43,6 @@ fn main(){
                     .expect("Failed to read line");
                 let aux = input.trim();
 
-                println!("{}",aux);
-
                 match aux.parse::<u8>() {
                     Ok(i) => {r = i; gotR = true;},
                     Err(..) => println!("input is either not an integer or not within range: {}", aux),
