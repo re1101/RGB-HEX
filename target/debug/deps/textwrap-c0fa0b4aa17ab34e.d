@@ -1,9 +1,0 @@
-C:\Users\GPOSMPC19\OneDrive - Resistencias San Marino, S.A. de C.V\Documentos\Varios\RGB-HEX\target\debug\deps\libtextwrap-c0fa0b4aa17ab34e.rmeta: C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs
-
-C:\Users\GPOSMPC19\OneDrive - Resistencias San Marino, S.A. de C.V\Documentos\Varios\RGB-HEX\target\debug\deps\textwrap-c0fa0b4aa17ab34e.d: C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs
-
-C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\lib.rs:
-C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\indentation.rs:
-C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\splitting.rs:
-C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core.rs:
-C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\textwrap-0.13.4\src\core\optimal_fit.rs:

@@ -10,8 +10,8 @@ repository = "https://github.com/re1101/RGB-HEX"
 publish = false
 
 [dependencies]
-ferris-says = "0.3.1"
-ferris_print = "0.1.0"
+eframe = "0.29.1"
+egui = "0.29.1"
 
 [[bin]]
 name = "main"
