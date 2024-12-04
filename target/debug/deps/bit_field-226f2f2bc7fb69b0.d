@@ -1,0 +1,5 @@
+C:\Users\GPOSMPC19\OneDrive - Resistencias San Marino, S.A. de C.V\Documentos\Varios\RGB-HEX\target\debug\deps\libbit_field-226f2f2bc7fb69b0.rmeta: C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bit_field-0.10.2\src\lib.rs
+
+C:\Users\GPOSMPC19\OneDrive - Resistencias San Marino, S.A. de C.V\Documentos\Varios\RGB-HEX\target\debug\deps\bit_field-226f2f2bc7fb69b0.d: C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bit_field-0.10.2\src\lib.rs
+
+C:\Users\GPOSMPC19\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bit_field-0.10.2\src\lib.rs:

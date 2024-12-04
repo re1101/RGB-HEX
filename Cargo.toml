@@ -12,6 +12,7 @@ publish = false
 [dependencies]
 eframe = "0.29.1"
 egui = "0.29.1"
+image = "0.25.5"
 
 [[bin]]
 name = "main"
