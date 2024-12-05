@@ -45,9 +45,11 @@ impl Default for MyApp {
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.label(format!("{:?}", ui.unique_id()));
+            ui.horizontal(|ui|{
+                ui.heading("RGB-HEX Converter");
 
-            ui.heading("RGB-HEX Converter");
+                ui.label(format!("{:?}", ui.unique_id()));
+            }); 
 
             ui.horizontal(|ui| {
                 ui.label("RGB:");
